@@ -16,8 +16,9 @@ APP = (function (mod) {
         for (prop in defaults) {
 			Object.prototype.hasOwnProperty.call(defaults, prop) === true ? extended[prop] = defaults[prop] : false;
         }
+        
         for (prop in options) {
-        	Object.prototype.hasOwnProperty.call(options, prop) === true ? extended[prop] = options[prop] : false;
+			Object.prototype.hasOwnProperty.call(options, prop) === true ? extended[prop] = options[prop] : false;
         }
         return extended;
     };
@@ -33,7 +34,6 @@ APP = (function (mod) {
 
 	Public.reduce = function(argument) {
 		return argument.reduce(function (tally, vote) {
-			//console.log(tally, vote);
 
 			if(!tally[vote])  {
 				tally[vote] = 1;

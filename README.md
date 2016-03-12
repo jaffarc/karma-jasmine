@@ -1,4 +1,4 @@
-# Router 
+# karma-jasmine 
 Study  karma with jasmine 
 
 [![Build Status](https://travis-ci.org/jaffarc/karma-jasmine.svg?branch=master)](https://travis-ci.org/jaffarc/karma-jasmine)
