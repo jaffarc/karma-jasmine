@@ -46,7 +46,7 @@ APP = (function (mod) {
 		},{});
 	};
 
-	Public.getNameJson = function (obj) {
+	Public.getstatusJson = function (obj) {
 		var name = [];
 		for (var key in obj.status) {
 		    name.push(key);
@@ -54,7 +54,16 @@ APP = (function (mod) {
 
 		return name;
 	};
-   
+
+   	Public.getZipQueryJson = function (obj) {
+		var name = [];
+		for (var key in obj.result.zipquery[0]) {
+		    name.push(key);
+		}
+
+		return name;
+	};
+	
     Public.extend = Private.extend;
    
     return Public;

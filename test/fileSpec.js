@@ -7,10 +7,10 @@ describe('APP', function() {
 	});
 
 	describe('APP extend', function() {
-		var result = { '0': 'A', '1': 'P', '2': 'P', test: 45 };
+		var expected = { '0': 'A', '1': 'P', '2': 'P', test: 45 };
 		
 		it('return object', function() {
-			expect(APP.extend("APP", {'test': jasmine.any(Number)})).toEqual(result);
+			expect(APP.extend("APP", {'test': jasmine.any(Number)})).toEqual(expected);
 		});
 	});
 
@@ -90,15 +90,36 @@ describe('APP', function() {
 		it('struct name status', function() {
 			
 			var expected, status;
-			
+		
 			expected = ['success', 'error', 'msg'];
 
-			status = APP.getNameJson(Cep);
+			status = APP.getstatusJson(Cep);
 
 			expect(status).toEqual(expected);
 		});
 
+		it('struct zipquery', function() {
+			var expected, status;
+			expected = [ 
+				'id_suppliers_location', 
+				'id_suppliers', 
+				'loc_district',  
+				'loc_city', 
+				'loc_state', 
+				'zipcode_range_start',
+				'zipcode_range_end',
+				'loc_zipcode',
+				'radius',
+				'latitude',
+				'longitude',
+				'dt_create',
+				'dt_update' 
+			];
 
+			status = APP.getZipQueryJson(Cep);
+			
+			expect(status).toEqual(expected);
+		});
 
 	});
 });
