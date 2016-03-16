@@ -1,9 +1,8 @@
+
 describe('APP', function() {
 	
 	it('test value and type', function() {
-		console.log(APP);
 		expect(APP.getName()).toEqual('APP');
-		
 	});
 
 	describe('APP extend', function() {
